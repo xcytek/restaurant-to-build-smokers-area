@@ -1,5 +1,5 @@
 #################################
-# Data Mining Excercise Proyect #
+# Data Mining Excercise Project #
 #################################
 
 # A restaurant want to know based on their customer's info (weight, height, birth year)
