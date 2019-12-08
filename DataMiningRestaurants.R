@@ -136,7 +136,7 @@ Weight$boxplot <- ggplot(data = na.omit(users_can_pay), aes(y = weight, x = smok
 
 # Test Data
 Weight$boxplot_test <- ggplot(data = na.omit(Weight$test), aes(y = weight, x = smoker, fill = smoker)) +
-  ggtitle("Original") +
+  ggtitle("Test") +
   geom_boxplot()
 
 # Plot both 
@@ -145,11 +145,16 @@ grid.arrange(Weight$boxplot, Weight$boxplot_test, nrow = 1)
 ### Boxplot relation between customers who are smoker by height
 
 # Original Data
-ggplot(data = na.omit(users_can_pay), aes(y = height, x = smoker, fill = smoker)) +
+Height$boxplot <- ggplot(data = na.omit(users_can_pay), aes(y = height, x = smoker, fill = smoker)) +
+  ggtitle("Original") +
   geom_boxplot()
 
-# Train Data
-ggplot(data = na.omit(Height$test), aes(y = height, x = smoker, fill = smoker)) +
+# Test Data
+Height$boxplot <- ggplot(data = na.omit(Height$test), aes(y = height, x = smoker, fill = smoker)) +
+  ggtitle("Test") +
   geom_boxplot()
+
+# Plot both 
+grid.arrange(Weight$boxplot, Weight$boxplot_test, nrow = 1)
 
 
