@@ -6,7 +6,7 @@
 # if they should build a smokers area in their facilities
 
 ##### Data Importing #####
-setwd("~/Documents/Maestria/2 Cuatrimestre/Analitica de Negocio/Unidad 4/uci-restaurant-consumer-data/")
+setwd("smokers-area/")
 user_profile <- read.table("userprofile.csv", header = TRUE, sep = ",")
 
 
@@ -89,7 +89,8 @@ cbind(Height$compare, Height$error)
 Height$rmse <- sqrt(mean(Height$error ^ 2, na.rm = TRUE))
 Height$rmse
 
-### Boxplot relation between customers who are smoker and their weight, height and birth year
+
+### Boxplot relation between customers who are smoker by birth year
 
 # Original Data
 ggplot(data = na.omit(users_can_pay), aes(y = birth_year, x = smoker, fill = smoker)) +
@@ -99,7 +100,7 @@ ggplot(data = na.omit(users_can_pay), aes(y = birth_year, x = smoker, fill = smo
 ggplot(data = na.omit(BirthYear$train), aes(y = birth_year, x = smoker, fill = smoker)) +
   geom_boxplot()
 
-### Boxplot relation between customers who are smoker and their weight
+### Boxplot relation between customers who are smoker by weight
 
 # Original Data
 ggplot(data = na.omit(users_can_pay), aes(y = weight, x = smoker, fill = smoker)) +
@@ -110,7 +111,7 @@ ggplot(data = na.omit(Weight$test), aes(y = weight, x = smoker, fill = smoker)) 
   geom_boxplot()
 
 
-### Boxplot relation between customers who are smoker and their height
+### Boxplot relation between customers who are smoker by height
 
 # Original Data
 ggplot(data = na.omit(users_can_pay), aes(y = height, x = smoker, fill = smoker)) +
